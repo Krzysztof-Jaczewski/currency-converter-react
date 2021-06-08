@@ -6,6 +6,7 @@ import Select from "./Select";
 import RadioCheck from "./RadioCheck";
 import Result from "./Result";
 import Button from "./Button";
+import ImputNumber from "./ImputNumber";
 
 
 function App() {
@@ -15,27 +16,28 @@ function App() {
       <Form>
         <Fieldset
           title="Kwota do przeliczenia"
-        
+          extraContent={
+            <ImputNumber
+            />}
           body={
-            <Select />
-          }
+            <Select
+            />}
         />
         <Fieldset
           title="Na jaką walutę"
           body={
-            <RadioCheck />
-          }
+            <RadioCheck
+            />}
         />
         <Fieldset
           title="Wynik"
           extraContent={
-             <Result/>
-          }
+            <Result
+            />}
           body={
             <Button
-            title="przelicz"
-            />
-          }
+              title="przelicz"
+            />}
         />
       </Form>
     </Main>
