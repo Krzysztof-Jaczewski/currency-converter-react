@@ -7,7 +7,6 @@ const ImputNumber = () => (
         min="0.01"
         step="0.01"
         required placeholder="Wpisz Kwotę"
-        value=""
     />
 );
 

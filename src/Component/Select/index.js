@@ -1,16 +1,17 @@
 import "./style.css";
 
-const Select = () => (
-  <select
+const Select = ({ currencies }) => {
+  return(<select
     className="select"
-    name="typ walut"
   >
-    <option value="PLN">PLN</option>
-    <option value="GBP">GBP</option>
-    <option value="EUR">EUR</option>
-    <option value="USD">USD</option>
-    <option value="CHF">CHF</option>
-  </select>
-);
+    {currencies.map(currency => (
+      <option
+        key={currency.id}
+      >
+        {currency.name}
+      </option>
+    ))};
+  </select >)
+};
 
 export default Select;
