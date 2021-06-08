@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import Form from "./Form";
 import Fieldset from "./Fieldset";
 import Select from "./Select";
+import RadioCheck from "./RadioCheck";
 
 
 function App() {
@@ -14,13 +15,15 @@ function App() {
           title= {"Kwota do przeliczenia"}
           extraContent= {}
           body = {
-          <Select
-          />}
+          <Select/>
+        }
           />
           <Fieldset
-          title= {"Na jaką walutę"}  />
-
-            <legend>Na jaką walutę wymienić</legend>
+          title= {"Na jaką walutę"} 
+          body = {
+          <RadioCheck/>
+        }
+          />
             <label className="form__label">
               <input className="form__inputRadio " type="radio" name="currency" value="GBP" checked />
               <span className="form__radioSpan">GBP</span>
