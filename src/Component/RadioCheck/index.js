@@ -1,9 +1,9 @@
 import "./style.css";
 
-const RadioCheck = () => {
+const RadioCheck = () => (
     <>
         <label className="form__label">
-            <input className="form__inputRadio " type="radio" name="currency" value="GBP" checked />
+            <input className="form__inputRadio " type="radio" name="currency" value="GBP" />
             <span className="form__radioSpan">GBP</span>
         </label>
         <label className="form__label">
@@ -19,7 +19,7 @@ const RadioCheck = () => {
             <span className="form__radioSpan ">CHF</span>
         </label>
     </>
-}
+);
 
 
 export default RadioCheck;

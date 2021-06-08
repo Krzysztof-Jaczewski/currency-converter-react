@@ -1,13 +1,12 @@
-import Main from "./Main";
-import Logo from "./Logo";
-import Form from "./Form";
-import Fieldset from "./Fieldset";
-import Select from "./Select";
-import RadioCheck from "./RadioCheck";
-import Result from "./Result";
-import Button from "./Button";
-import ImputNumber from "./ImputNumber";
-
+import Main from "./Component/Main";
+import Logo from "./Component/Logo";
+import Form from "./Component/Form";
+import Fieldset from "./Component/Fieldset";
+import Select from "./Component/Select";
+import RadioCheck from "./Component/RadioCheck";
+import Result from "./Component/Result";
+import Button from "./Component/Button";
+import ImputNumber from "./Component/ImputNumber";
 
 function App() {
   return (
@@ -34,10 +33,9 @@ function App() {
           extraContent={
             <Result
             />}
-          body={
-            <Button
-              title="przelicz"
-            />}
+        />
+        <Button
+          title="przelicz"
         />
       </Form>
     </Main>

@@ -1,4 +1,4 @@
-import "./style.css"
+import "./style.css";
 
 const Logo = () => (
     <header className="logo">
@@ -7,9 +7,9 @@ const Logo = () => (
         <span className="logo__span">
                 a
         </span>
-         &nbsp;ntor
+         &nbsp; ntor
     </h1>
     </header>
-)
+);
 
 export default Logo;

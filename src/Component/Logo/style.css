@@ -13,6 +13,7 @@
     top: 60px;
     animation: flashingLight 5s linear infinite;
 }
+
 @keyframes flashingLight {
     0%,90%,92%, 98%  { opacity: 0.2 ;}
     91%,93.5%,100% { opacity: 1.0; }
