@@ -1,25 +1,22 @@
 import Main from "./Main";
 import Logo from "./Logo";
+import Form from "./Form";
+import Fieldset from "./Fieldset";
+import Select from "./Select";
 
 
 function App() {
   return (
     <Main>
       <Logo/>
-      <Form></Form>
+      <Form>
         <Fieldset
           title= {"Kwota do przeliczenia"}
-          extraContent= {Number}
-          {Number}
+          extraContent= {}
+          body = {
+          <Select
+          />}
           />
-            <select className="form__select" name="typ walut<input className="form__number" type="number" min="0.01" step="0.01" required placeholder="Wpisz Kwotę" value=""/>y">
-              <option value="PLN">PLN</option>
-              <option value="GBP">GBP</option>
-              <option value="EUR">EUR</option>
-              <option value="USD">USD</option>
-              <option value="CHF">CHF</option>
-            </select>
-           
           <Fieldset
           title= {"Na jaką walutę"}  />
 
