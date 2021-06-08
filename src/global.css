@@ -1,0 +1,24 @@
+
+html {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+:root {
+  --font-color: rgb(250, 250, 250);
+  --main-color: rgb(82, 231, 211);
+}
+
+body {
+  background-image: url("https://scontent.fwaw7-1.fna.fbcdn.net/v/t1.6435-0/p526x296/176242473_4038427202939861_738054290202229598_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=730e14&_nc_ohc=73Vxkh1qmKIAX-g3s7-&_nc_ht=scontent.fwaw7-1.fna&tp=6&oh=82ddf9df04537e36d6798113c7406af7&oe=60A47A16");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  color: var(--font-color);
+  margin: 0;
+}
