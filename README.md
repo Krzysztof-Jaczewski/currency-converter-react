@@ -1,4 +1,4 @@
-#currency-converter
+# currency-converter
 ## Available Scripts
 
 In the project directory, you can run:
