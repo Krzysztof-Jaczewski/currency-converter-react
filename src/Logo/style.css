@@ -6,7 +6,7 @@
     letter-spacing: 5px;
 }
 
-.logo_span {
+.logo__span {
     display: inline-block;
     position: absolute;
     transform: rotateZ(45deg);

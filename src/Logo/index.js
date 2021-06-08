@@ -1,10 +1,10 @@
 import "./style.css"
 
 const Logo = () => (
-    <header>
+    <header className="logo">
         <h1>
             K
-        <span className="logo_span">
+        <span className="logo__span">
                 a
         </span>
          &nbsp;ntor
