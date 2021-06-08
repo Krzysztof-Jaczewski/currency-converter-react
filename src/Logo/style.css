@@ -1,0 +1,19 @@
+.logo {
+    font-size: 30px;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px var(--main-color), 0 0 10px var(--main-color), 0 0 15px var(--main-color), 0 0 20px var(--main-color);
+    font-family: 'Ribeye Marrow', cursive;
+    letter-spacing: 5px;
+}
+
+.logo_span {
+    display: inline-block;
+    position: absolute;
+    transform: rotateZ(45deg);
+    top: 60px;
+    animation: flashingLight 5s linear infinite;
+}
+@keyframes flashingLight {
+    0%,90%,92%, 98%  { opacity: 0.2 ;}
+    91%,93.5%,100% { opacity: 1.0; }
+}

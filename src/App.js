@@ -1,12 +1,12 @@
 import Main from "./Main";
+import Logo from "./Logo";
 
 
 function App() {
   return (
     <Main>
-      <header className="logo">
-        <h1>K<span className="logo_span">a</span> &nbsp;ntor</h1>
-      </header>
+      <Logo>
+       </Logo>
       <form className="form" action="https://postman-echo.com/get" method="POST"
         enctype="application/x-www-form-urlencoded">
         <fieldset className="form__fieldset">
