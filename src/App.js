@@ -1,8 +1,9 @@
+import Main from "./Main";
 
 
 function App() {
   return (
-    <main className="main">
+    <Main>
       <header className="logo">
         <h1>K<span className="logo_span">a</span> &nbsp;ntor</h1>
       </header>
@@ -47,7 +48,7 @@ function App() {
           </fieldset>
           <button type="submit" className="neonButton">Przelicz</button>
         </form>
-    </main>
+    </Main>
   );
 }
 
