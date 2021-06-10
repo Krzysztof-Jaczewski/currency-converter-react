@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Button = ({ title }) => (
+export const Button = ({ title }) => (
     <button
         type="submit"
         className="neonButton"
@@ -8,5 +8,3 @@ const Button = ({ title }) => (
         {title}
     </button>
 );
-
-export default Button;

@@ -1,51 +1,19 @@
 
-import Main from "./Component/Main";
-import Logo from "./Component/Logo";
-import Form from "./Component/Form";
-import Fieldset from "./Component/Fieldset";
-import Select from "./Component/Select";
+import {Main} from "./Component/Main";
+import {Logo} from "./Component/Logo";
+import {Form} from "./Component/Form";
+import {Fieldset} from "./Component/Fieldset";
+import {Select} from "./Component/Select";
 import { RadioCheck } from "./Component/RadioCheck";
-import Result from "./Component/Result";
-import Button from "./Component/Button";
-import ImputNumber from "./Component/ImputNumber";
+import {Result} from "./Component/Result";
+import {Button} from "./Component/Button";
+import {ImputNumber} from "./Component/ImputNumber";
 import { useState } from "react";
+import {currencies} from "./currencies/currencies"
 
 
 function App() {
-  const currencies = [
-    {
-      id: 1,
-      name: "PLN",
-      fullName: "złotych",
-      value: 1,
-    },
-    {
-      id: 2,
-      name: "CHF",
-      fullName: "Franków Szwajcarskich",
-      rate: 4.0901,
-    },
-    {
-      id: 3,
-      name: "USD",
-      fullName: "Dolarów Amerykańskich",
-      rate: 3.6690,
-    },
-
-    {
-      id: 4,
-      name: "GBP",
-      fullName: "Funtów brytyjskich",
-      rate: 5.1889,
-    },
-
-    {
-      id: 5,
-      name: "EUR",
-      fullName: "Euro",
-      rate: 4.4674,
-    },
-  ];
+  
 
    const[secectCurrency,setSelectCurrency] = useState([])
    console.log(secectCurrency)

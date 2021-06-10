@@ -1,7 +1,7 @@
 
 import "./style.css";
 
-const Select = ({ currencies, setSelectCurrency }) => {
+export const Select = ({ currencies, setSelectCurrency }) => {
 
   return (
   <select
@@ -19,5 +19,3 @@ const Select = ({ currencies, setSelectCurrency }) => {
     ))};
   </select >)
 };
-
-export default Select;

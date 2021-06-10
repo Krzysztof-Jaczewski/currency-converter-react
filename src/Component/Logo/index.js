@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Logo = () => (
+export const Logo = () => (
     <header className="logo">
         <h1>
             K
@@ -11,5 +11,3 @@ const Logo = () => (
     </h1>
     </header>
 );
-
-export default Logo;
