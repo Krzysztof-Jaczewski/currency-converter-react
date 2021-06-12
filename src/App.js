@@ -13,13 +13,18 @@ import {currencies} from "./currencies/currencies"
 
 
 function App() {
-  
+  let result= 0;
 const [amount, setAmont] = useState(0);
 console.log(amount)
-   const[secectCurrency,setSelectedCurrency] = useState(currencies[0].name);
-   console.log(secectCurrency)
-   const[radioCurrency,setTargetCurrency] = useState(currencies[1].name);
-   console.log(radioCurrency)
+   const[selectCurrency,setSelectedCurrency] = useState(currencies[0].name);
+   console.log(selectCurrency)
+   const[targetCurrency,setTargetCurrency] = useState(currencies[1].name);
+   console.log(targetCurrency)
+
+  const calculateResult = ( amount, selectCurrency,targetCurrency ) =>{
+       amount= +amount;
+       result = selectCurrency* amount/ targetCurrency;
+  }
 
   return (
     <Main>
@@ -49,9 +54,11 @@ console.log(amount)
           title="Wynik"
           extraContent={
             <Result
+            result = {result}
             />}
         />
         <Button
+          onClick = {calculateResult}
           title="przelicz"
         />
       </Form>

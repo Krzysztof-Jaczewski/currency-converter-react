@@ -6,13 +6,12 @@ export const Select = ({ currencies, setSelectedCurrency }) => {
   return (
   <select
     className="select"
-    value={currencies.rate}
     onChange={({ target }) => setSelectedCurrency(target.value)}
   >
     {currencies.map(currency => (
       <option
-      key={currency.id}
-      value ={currency.id}
+      key={currency.name}
+      value ={currency.rate}
       >
         {currency.name}
       </option>
