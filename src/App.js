@@ -14,12 +14,13 @@ import {currencies} from "./currencies/currencies"
 
 function App() {
   
-
-   const[secectCurrency,setSelectCurrency] = useState([])
+const [amount, setAmont] = useState(0);
+console.log(amount)
+   const[secectCurrency,setSelectedCurrency] = useState(currencies[0].name);
    console.log(secectCurrency)
-   const[radioCurrency,setRadioCurrency] = useState([]);
+   const[radioCurrency,setTargetCurrency] = useState(currencies[1].name);
    console.log(radioCurrency)
-   console.log(radioCurrency)
+
   return (
     <Main>
       <Logo />
@@ -28,11 +29,12 @@ function App() {
           title="Kwota do przeliczenia"
           extraContent={
             <ImputNumber
+            setAmont={setAmont}
             />}
           body={
             <Select
               currencies={currencies}
-              setSelectCurrency = {setSelectCurrency}
+              setSelectedCurrency = {setSelectedCurrency}
             />}
         />
         <Fieldset
@@ -40,7 +42,7 @@ function App() {
           body={
             <RadioCheck
               currencies={currencies}
-              setRadioCurrency={setRadioCurrency}
+              setTargetCurrency={setTargetCurrency}
             />}
         />
         <Fieldset

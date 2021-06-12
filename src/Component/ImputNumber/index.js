@@ -1,6 +1,6 @@
 import "./style.css";
 
-export const ImputNumber = () => (
+export const ImputNumber = ({setAmont}) => (
     <input
         className="imputNumber"
         type="number"
@@ -8,5 +8,6 @@ export const ImputNumber = () => (
         step="0.01"
         required 
         placeholder="Wpisz Kwotę"
+        onChange = {({target})=>setAmont(target.value)}
     />
 );

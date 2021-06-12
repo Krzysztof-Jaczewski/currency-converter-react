@@ -1,15 +1,14 @@
 import "./style.css";
 
-export const RadioCheck = ({ currencies,setRadioCurrency }) => {
+export const RadioCheck = ({ currencies,setTargetCurrency }) => {
        return (
         currencies.map(currency => {
             if (currency.id === 1) return null
              return (
                 <label key={currency.id}
                     className="form__label"
-                    onClick = {({ target }) => setRadioCurrency(target.value)}
+                    onClick = {({ target }) => setTargetCurrency(target.value)}
                     >
-                        
                     <input 
                     value ={currency.id}
                     className="form__inputRadio "
@@ -20,7 +19,6 @@ export const RadioCheck = ({ currencies,setRadioCurrency }) => {
                      className="form__radioSpan"
                      >{currency.name}</span>
                 </label>
-
             )
         }));
 }

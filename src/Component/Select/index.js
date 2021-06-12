@@ -1,13 +1,13 @@
 
 import "./style.css";
 
-export const Select = ({ currencies, setSelectCurrency }) => {
+export const Select = ({ currencies, setSelectedCurrency }) => {
 
   return (
   <select
     className="select"
     value={currencies.rate}
-    onChange={({ target }) => setSelectCurrency(target.value)}
+    onChange={({ target }) => setSelectedCurrency(target.value)}
   >
     {currencies.map(currency => (
       <option
