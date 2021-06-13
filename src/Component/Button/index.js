@@ -1,10 +1,9 @@
 import "./style.css";
-export const Button = ({ title }) => {
-
-    return(<button
-        type="submit"
-        className="neonButton"
-    >
-        {title}
-    </button>)
-};
+export const Button = ({ title }) => (
+        <button
+            type="submit"
+            className="neonButton"
+        >
+            {title}
+        </button>
+);

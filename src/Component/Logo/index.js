@@ -4,10 +4,10 @@ export const Logo = () => (
     <header className="logo">
         <h1>
             K
-        <span className="logo__span">
+            <span className="logo__span">
                 a
-        </span>
-         &nbsp; ntor
-    </h1>
+            </span>
+            &nbsp; ntor
+        </h1>
     </header>
 );

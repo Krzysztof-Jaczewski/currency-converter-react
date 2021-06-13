@@ -29,10 +29,10 @@ function App() {
     <Main>
       <Logo />
       <Form
-      amount={amount}
-      selectedCurrency={selectedCurrency}
-      targetCurrency={targetCurrency}
-      setResult={setResult}
+        amount={amount}
+        selectedCurrency={selectedCurrency}
+        targetCurrency={targetCurrency}
+        setResult={setResult}
       >
         <Fieldset
           title="Kwota do przeliczenia"

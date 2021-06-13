@@ -17,6 +17,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
+  min-height: 100vh;
   text-align: center;
   font-family: 'Merriweather', serif;
   color: var(--font-color);
