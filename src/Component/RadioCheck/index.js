@@ -1,5 +1,4 @@
 import "./style.css";
-import flagapolski from "../../images/flagapolski.png"
 
 export const RadioCheck = ({ currencies, setTargetCurrencyId, selectedCurrencyId, targetCurrencyId }) => {
 
@@ -20,13 +19,9 @@ export const RadioCheck = ({ currencies, setTargetCurrencyId, selectedCurrencyId
                 <span
                     className="form__radioSpan"
                 >
-                   <img url= {flagapolski} alt="a"/>
-              
                     {currency.name}
                 </span>
-                
             </label>
-            
             )
         }));
 }

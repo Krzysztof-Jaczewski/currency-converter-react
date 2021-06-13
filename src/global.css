@@ -22,8 +22,3 @@ body {
   color: var(--font-color);
   margin: 0;
 }
-.flag{
-  border-radius: 50%;
-  width: 10px;
-  height: 10px;
-}
