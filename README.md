@@ -1,5 +1,49 @@
 # currency-converter
-## Available Scripts
+
+## :computer: Demonstration - link below
+[Click here to visit my site](https://krzysztof-jaczewski.github.io/Currrency-converter/)
+
+## :mag: Instruction
+* [Link to site](#Try-it,-link-below)
+* [General description](#General)
+* [Logo](#Logo)
+* [Form input and select list](#Form-input-and-select-list)
+* [Radio buttons](#Radio-Buttons)
+* [Result button](#Result-Button)
+* [Used technologies](#Used-Technologies)
+
+## :memo: General
+My site is made to practice fuctions and different selection modes in forms and new CSS styles
+## :globe_with_meridians: Logo
+I tried to made a logo similar to the good 70s 
+![logo](readme/logo.gif)
+## :bookmark_tabs: Form input and select list
+the user enters the amount and selects the currency with which he wants to exchange from list, 
+
+![input](readme/input.gif)
+
+## :radio: Radio Buttons
+This section is to choose which currency you want to receive. I wanted these buttons to look nice, judge for yourself.
+![radioButtons](readme/radioButtons.gif)
+
+## :chocolate_bar: Result Button
+Button is made similarly to logo as a neon. It start calculations and the result appears as templet strings in form above
+![radioButtons](readme/button.gif)
+## :gear: Used Technologies
+
+* HTML
+* CSS
+* Flex
+* JavaScript
+* BEM
+* GIT
+* React
+* CreatReactApp
+* Babel
+* WebPack
+* JSX
+
+## :wrench: Available Scripts
 
 In the project directory, you can run:
 
