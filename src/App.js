@@ -1,45 +1,49 @@
 
-import {Main} from "./Component/Main";
-import {Logo} from "./Component/Logo";
-import {Form} from "./Component/Form";
-import {Fieldset} from "./Component/Fieldset";
-import {Select} from "./Component/Select";
-import { RadioCheck } from "./Component/RadioCheck";
-import {Result} from "./Component/Result";
-import {Button} from "./Component/Button";
-import {ImputNumber} from "./Component/ImputNumber";
 import { useState } from "react";
-import {currencies} from "./currencies/currencies"
+import { Main } from "./Component/Main";
+import { Logo } from "./Component/Logo";
+import { Form } from "./Component/Form";
+import { Fieldset } from "./Component/Fieldset";
+import { Select } from "./Component/Select";
+import { RadioCheck } from "./Component/RadioCheck";
+import { Result } from "./Component/Result";
+import { Button } from "./Component/Button";
+import { ImputNumber } from "./Component/ImputNumber";
+import { currencies } from "./currencies/currencies"
 
 
 function App() {
-  let result= 0;
-const [amount, setAmont] = useState(0);
-console.log(amount)
-   const[selectCurrency,setSelectedCurrency] = useState(currencies[0].name);
-   console.log(selectCurrency)
-   const[targetCurrency,setTargetCurrency] = useState(currencies[1].name);
-   console.log(targetCurrency)
+  const [result, setResult] = useState(0);
+  const [amount, setAmont] = useState(0);
+  console.log(amount)
+  console.log(result);
+  const [selectedCurrency, setSelectedCurrency] = useState(currencies[0].id);
+  console.log(currencies[selectedCurrency].rate)
 
-  const calculateResult = ( amount, selectCurrency,targetCurrency ) =>{
-       amount= +amount;
-       result = selectCurrency* amount/ targetCurrency;
-  }
+  const [targetCurrency, setTargetCurrency] = useState(currencies[1].id);
+  console.log(currencies[targetCurrency].rate)
 
+
+  console.log(result);
   return (
     <Main>
       <Logo />
-      <Form>
+      <Form
+      amount={amount}
+      selectedCurrency={selectedCurrency}
+      targetCurrency={targetCurrency}
+      setResult={setResult}
+      >
         <Fieldset
           title="Kwota do przeliczenia"
           extraContent={
             <ImputNumber
-            setAmont={setAmont}
+              setAmont={setAmont}
             />}
           body={
             <Select
               currencies={currencies}
-              setSelectedCurrency = {setSelectedCurrency}
+              setSelectedCurrency={setSelectedCurrency}
             />}
         />
         <Fieldset
@@ -48,17 +52,19 @@ console.log(amount)
             <RadioCheck
               currencies={currencies}
               setTargetCurrency={setTargetCurrency}
+              selectedCurrency={selectedCurrency}
             />}
         />
         <Fieldset
           title="Wynik"
           extraContent={
             <Result
-            result = {result}
+              selectedCurrency={selectedCurrency}
+              targetCurrency={targetCurrency}
+              result={result}
             />}
         />
         <Button
-          onClick = {calculateResult}
           title="przelicz"
         />
       </Form>

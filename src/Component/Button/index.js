@@ -1,10 +1,10 @@
 import "./style.css";
+export const Button = ({ title }) => {
 
-export const Button = ({ title }) => (
-    <button
+    return(<button
         type="submit"
         className="neonButton"
     >
         {title}
-    </button>
-);
+    </button>)
+};

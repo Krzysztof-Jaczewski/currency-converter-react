@@ -1,7 +1,7 @@
 import "./style.css";
 
-export const Result = ({ content }) => (
+export const Result = ({ result }) => (
     <label>
-        <p className="result" >{content}</p>
+        <p className="result" >{result}</p>
     </label>
 );

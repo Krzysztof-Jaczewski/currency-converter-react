@@ -1,16 +1,16 @@
 import "./style.css";
 
-export const RadioCheck = ({ currencies,setTargetCurrency }) => {
+export const RadioCheck = ({ currencies,setTargetCurrency,selectedCurrency }) => {
        return (
         currencies.map(currency => {
-            if (currency.id === 1) return null
+            if (currency.id === +selectedCurrency) return null
              return (
                 <label key={currency.name}
                     className="form__label"
-                    onClick = {({ target }) => setTargetCurrency(target.value)}
                     >
                     <input 
-                    value ={currency.rate}
+                     onClick = {({ target }) => setTargetCurrency(target.value)}
+                    value ={currency.id}
                     className="form__inputRadio "
                     type="radio" 
                     name="currency" 
