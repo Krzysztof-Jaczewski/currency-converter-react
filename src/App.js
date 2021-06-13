@@ -13,26 +13,31 @@ import { currencies } from "./currencies/currencies"
 
 
 function App() {
+
   const [result, setResult] = useState(0);
+  const [resultUpdate, setResultUpdate] = useState(0);
+
   const [amount, setAmont] = useState(0);
-  console.log(amount)
-  console.log(result);
-  const [selectedCurrency, setSelectedCurrency] = useState(currencies[0].id);
-  console.log(currencies[selectedCurrency].rate)
+  const [selectedCurrencyId, setSelectedCurrencyId] = useState(0);
+  const [targetCurrencyId, setTargetCurrencyId] = useState(1);
 
-  const [targetCurrency, setTargetCurrency] = useState(currencies[1].id);
-  console.log(currencies[targetCurrency].rate)
+  const calculateResult = (amount, selectedCurrencyId, targetCurrencyId) => {
+    amount = +amount;
+    let result = selectedCurrencyId * amount / targetCurrencyId;
+    result = result.toFixed(2);
+    setResult(result);
+  }
 
-
-  console.log(result);
   return (
     <Main>
       <Logo />
       <Form
         amount={amount}
-        selectedCurrency={selectedCurrency}
-        targetCurrency={targetCurrency}
-        setResult={setResult}
+        selectedCurrencyId={selectedCurrencyId}
+        targetCurrencyId={targetCurrencyId}
+        setResultUpdate={setResultUpdate}
+        calculateResult={calculateResult}
+        result={result}
       >
         <Fieldset
           title="Kwota do przeliczenia"
@@ -43,7 +48,7 @@ function App() {
           body={
             <Select
               currencies={currencies}
-              setSelectedCurrency={setSelectedCurrency}
+              setSelectedCurrencyId={setSelectedCurrencyId}
             />}
         />
         <Fieldset
@@ -51,17 +56,16 @@ function App() {
           body={
             <RadioCheck
               currencies={currencies}
-              setTargetCurrency={setTargetCurrency}
-              selectedCurrency={selectedCurrency}
+              setTargetCurrencyId={setTargetCurrencyId}
+              selectedCurrencyId={selectedCurrencyId}
+              targetCurrencyId={targetCurrencyId}
             />}
         />
         <Fieldset
           title="Wynik"
           extraContent={
             <Result
-              selectedCurrency={selectedCurrency}
-              targetCurrency={targetCurrency}
-              result={result}
+              resultUpdate={resultUpdate}
             />}
         />
         <Button

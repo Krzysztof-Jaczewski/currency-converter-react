@@ -1,17 +1,29 @@
+
+import { useEffect } from "react";
 import { currencies } from "../../currencies/currencies";
 
-export const Form = ({ children, amount, selectedCurrency, targetCurrency, setResult }) => {
+export const Form = ({ children, amount, selectedCurrencyId, targetCurrencyId, setResultUpdate, result, calculateResult }) => {
 
-    const calculateResult = (am, SC, TC) => {
-        am = +am;
-        let res = SC * amount / TC;
-        res = res.toFixed(2);
-        setResult(res);
-    }
-
+    useEffect(() => {
+        calculateResult(amount, currencies[selectedCurrencyId].rate, currencies[targetCurrencyId].rate);
+      },[amount,calculateResult,selectedCurrencyId, targetCurrencyId]);
     const onFormSubmit = (event) => {
         event.preventDefault();
-        calculateResult(amount, currencies[selectedCurrency].rate, currencies[targetCurrency].rate)
+        setResultUpdate(
+            <>
+                <p className = "result" >
+                    {amount} &nbsp;&nbsp;
+                    {currencies[selectedCurrencyId].fullName}
+                </p>
+                <p>
+                    wymienisz na:
+                </p>
+                <p>
+                    {result}&nbsp;&nbsp;
+                    {currencies[targetCurrencyId].fullName}
+                </p>
+            </>
+        )
     };
 
     return (
