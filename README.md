@@ -11,6 +11,7 @@
 * [Radio buttons](#Radio-Buttons)
 * [Result button](#Result-Button)
 * [Used technologies](#Used-Technologies)
+* [Available Scripts](#Available-Scripts)
 
 ## :memo: General
 My site is made to practice fuctions and different selection modes in forms and new CSS styles
