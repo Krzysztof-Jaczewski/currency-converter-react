@@ -1,7 +1,7 @@
 # currency-converter
 
 ## :computer: Demonstration - link below
-[Click here to visit my site](https://krzysztof-jaczewski.github.io/Currrency-converter/)
+[Click here to visit my site](https://krzysztof-jaczewski.github.io/currency-converter-react/)
 
 ## :mag: Instruction
 * [Link to site](#Try-it,-link-below)
