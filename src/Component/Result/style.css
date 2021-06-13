@@ -1,4 +1,7 @@
 .result {
-    height: 20px;
     margin: 5px auto;
+}
+
+.result__amount{
+    font-size: 24px;
 }

@@ -47,10 +47,12 @@
     color: black;
     text-shadow: none;
 }
+
 .neonButton:hover::before,
 .neonButton:focus::before{
     opacity: 1;
 }
+
 .neonButton:hover::after,
 .neonButton:focus::after{
     opacity: 1;

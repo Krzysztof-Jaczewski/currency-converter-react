@@ -2,7 +2,7 @@ export const currencies = [
   {
     id: 0,
     name: "PLN",
-    fullName: "złotych",
+    fullName: "Złotych",
     rate: 1,
   },
   {

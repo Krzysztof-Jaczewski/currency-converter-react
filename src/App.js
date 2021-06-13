@@ -14,12 +14,22 @@ import { currencies } from "./currencies/currencies"
 
 function App() {
 
-  const [result, setResult] = useState(0);
-  const [resultUpdate, setResultUpdate] = useState(0);
+  const [result, setResult] = useState(() => {
+    return 0
+  });
+  const [resultUpdate, setResultUpdate] = useState(() => {
+    return 0
+  });
 
-  const [amount, setAmont] = useState(0);
-  const [selectedCurrencyId, setSelectedCurrencyId] = useState(0);
-  const [targetCurrencyId, setTargetCurrencyId] = useState(1);
+  const [amount, setAmont] = useState(() => {
+    return 0
+  });
+  const [selectedCurrencyId, setSelectedCurrencyId] = useState(() => {
+    return 0
+  });
+  const [targetCurrencyId, setTargetCurrencyId] = useState(() => {
+    return 1
+  });
 
   const calculateResult = (amount, selectedCurrencyId, targetCurrencyId) => {
     amount = +amount;

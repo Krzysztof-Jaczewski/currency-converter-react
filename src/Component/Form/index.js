@@ -6,20 +6,26 @@ export const Form = ({ children, amount, selectedCurrencyId, targetCurrencyId, s
 
     useEffect(() => {
         calculateResult(amount, currencies[selectedCurrencyId].rate, currencies[targetCurrencyId].rate);
-      },[amount,calculateResult,selectedCurrencyId, targetCurrencyId]);
+    }, [amount, calculateResult, selectedCurrencyId, targetCurrencyId]);
     const onFormSubmit = (event) => {
         event.preventDefault();
         setResultUpdate(
             <>
-                <p className = "result" >
-                    {amount} &nbsp;&nbsp;
+                <p>
+                    <b className="result__amount">
+                        {amount}
+                    </b>
+                    &nbsp;&nbsp;
                     {currencies[selectedCurrencyId].fullName}
                 </p>
                 <p>
                     wymienisz na:
                 </p>
                 <p>
-                    {result}&nbsp;&nbsp;
+                    <b className="result__amount">
+                        {result}
+                    </b>
+                    &nbsp;&nbsp;
                     {currencies[targetCurrencyId].fullName}
                 </p>
             </>
