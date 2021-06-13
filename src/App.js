@@ -37,10 +37,11 @@ function App() {
     result = result.toFixed(2);
     setResult(result);
   }
-
+  
   return (
     <Main>
       <Logo />
+      <img src="./images/flagaEuro.jpg" alt="a"/>
       <Form
         amount={amount}
         selectedCurrencyId={selectedCurrencyId}
