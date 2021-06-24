@@ -17,19 +17,19 @@
 My site is made to practice fuctions and different selection modes in forms and new CSS styles
 ## :globe_with_meridians: Logo
 I tried to made a logo similar to the good 70s 
-![logo](src/images/readme/logo.gif)
+![logo](public/readme/logo.gif)
 ## :bookmark_tabs: Form input and select list
 the user enters the amount and selects the currency with which he wants to exchange from list, 
 
-![input](src/images/readme/input.gif)
+![input](public/readme/input.gif)
 
 ## :radio: Radio Buttons
 This section is to choose which currency you want to receive. I wanted these buttons to look nice, judge for yourself.
-![radioButtons](src/images/readme/radioButtons.gif)
+![radioButtons](public/readme/radioButtons.gif)
 
 ## :chocolate_bar: Result Button
 Button is made similarly to logo as a neon. It start calculations and the result appears as templet strings in form above
-![radioButtons](src/images/readme/button.gif)
+![radioButtons](public/readme/button.gif)
 ## :gear: Used Technologies
 
 * HTML
