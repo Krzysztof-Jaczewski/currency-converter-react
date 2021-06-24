@@ -19,6 +19,7 @@ export const RadioCheck = ({ currencies, setTargetCurrencyId, selectedCurrencyId
                 <span
                     className="form__radioSpan"
                 >
+                    {currency.flag}
                     {currency.name}
                 </span>
             </label>
