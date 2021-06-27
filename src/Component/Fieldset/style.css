@@ -13,5 +13,5 @@
 .fieldset__legend {
     border-radius: 30px;
     padding: 5px 10px;
-    box-shadow: 0 0 0 4px black, 0 0 0 6px var( --main-color);
+    box-shadow: 0 0 0 1px black, 0 0 0 3px var( --main-color);
 }
