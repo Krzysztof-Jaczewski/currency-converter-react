@@ -8,7 +8,6 @@ const StyledInput = styled.input`
 `;
 export const ImputNumber = ({ setAmont }) => (
   <StyledInput
-    className="imputNumber"
     type="number"
     min="0.01"
     max="1000000000000"

@@ -8,11 +8,13 @@ export const Checkbox = ({
 }) => {
   return currencies.map((currency, index) => {
     if (currency.id === +selectedCurrencyId) return null;
+
     return (
-      <StyledLabel>
+      <StyledLabel key={index}>
         <HiddenCheckbox
           defaultChecked={index === targetCurrencyId}
           onClick={({ target }) => setTargetCurrencyId(target.value)}
+          key={currency.id}
           value={currency.id}
           type="radio"
           name="currency"

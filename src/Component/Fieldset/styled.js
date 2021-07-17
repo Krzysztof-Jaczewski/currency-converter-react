@@ -5,7 +5,7 @@ export const StyledFieldset = styled.fieldset`
   justify-content: center;
   align-items: center;
   min-height: 80px;
-  margin: 20px;
+  margin: 20px 0;
   flex-wrap: wrap;
   border-radius: 20px;
   background-color: transparent;
