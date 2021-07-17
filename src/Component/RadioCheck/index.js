@@ -1,28 +1,27 @@
-import "./style.css";
+import { HiddenCheckbox, StyledCheckbox, StyledLabel } from "./styled";
 
-export const RadioCheck = ({ currencies, setTargetCurrencyId, selectedCurrencyId, targetCurrencyId }) => {
-
+export const RadioCheck = ({
+  currencies,
+  setTargetCurrencyId,
+  selectedCurrencyId,
+  targetCurrencyId,
+}) => {
+  return currencies.map((currency, index) => {
+    if (currency.id === +selectedCurrencyId) return null;
     return (
-        currencies.map((currency, index) => {
-            if (currency.id === +selectedCurrencyId) return null
-            return (<label key={currency.name}
-                className="form__label"
-            >
-                <input
-                    defaultChecked={index === targetCurrencyId}
-                    onClick={({ target }) => setTargetCurrencyId(target.value)}
-                    value={currency.id}
-                    className="form__inputRadio "
-                    type="radio"
-                    name="currency"
-                />
-                <span
-                    className="form__radioSpan"
-                >
-                    {currency.flag}
-                    {currency.name}
-                </span>
-            </label>
-            )
-        }));
-}
+      <StyledLabel>
+        <HiddenCheckbox
+          defaultChecked={index === targetCurrencyId}
+          onClick={({ target }) => setTargetCurrencyId(target.value)}
+          value={currency.id}
+          type="radio"
+          name="currency"
+        />
+        <StyledCheckbox>
+          {currency.flag}
+          {currency.name}
+        </StyledCheckbox>
+      </StyledLabel>
+    );
+  });
+};
