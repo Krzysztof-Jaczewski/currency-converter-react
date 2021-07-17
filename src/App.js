@@ -15,7 +15,7 @@ import  { ThemeProvider } from "styled-components";
 
 const theme = {
   colors:{
-    mainColor: "rgb(82, 231, 211)",
+    mainColor: "red",
     fontColor: "rgb(250, 250, 250)",
   },
 };

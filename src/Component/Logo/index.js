@@ -1,13 +1,9 @@
-import "./style.css";
-
+import { Neon, FlashigNeon } from "./styled";
 export const Logo = () => (
-    <header className="logo">
-        <h1>
-            K
-            <span className="logo__span">
-                a
-            </span>
-            &nbsp; ntor
-        </h1>
-    </header>
+  <Neon>
+    <h1>
+      K<FlashigNeon>a</FlashigNeon>
+      &nbsp; ntor
+    </h1>
+  </Neon>
 );
