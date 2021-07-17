@@ -1,7 +1,8 @@
-import "./style.css"
+import styled from "styled-components";
 
-export const Main = ({ children }) => (
-    <main className="main">
-        {children}
-    </main>
-);
+const StyledMain = styled.main`
+  max-width: 600px;
+  margin: 0 auto;
+`;
+
+export const Main = ({ children }) => <StyledMain>{children}</StyledMain>;
