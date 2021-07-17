@@ -1,11 +1,11 @@
-import "./style.css";
+import {StyledFieldset , StyledLegend} from "./styled";
 
 export const Fieldset = ({ title, extraContent, body }) => (
-    <fieldset className="fieldset">
-        <legend className="fieldset__legend">
+    <StyledFieldset>
+        <StyledLegend>
             {title}
-        </legend>
+        </StyledLegend>
         {extraContent}
         {body}
-    </fieldset>
+    </StyledFieldset>
 );
