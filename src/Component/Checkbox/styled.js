@@ -15,14 +15,6 @@ export const StyledLabel = styled.label`
 export const HiddenCheckbox = styled.input`
   position: absolute;
   appearance: none;
-  &:checked ~ &::before {
-    content: "";
-    color: var(--font-color);
-    text-shadow: 0 0 20px #0f0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5),
-      inset 1px 1px 1px rgba(0, 0, 0, 0.4),
-      inset -1px -1px 4px rgba(255, 255, 255, 0.3);
-  }
 `;
 
 export const StyledCheckbox = styled.span`
@@ -69,9 +61,13 @@ export const StyledCheckbox = styled.span`
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: red;
-    box-shadow: 0 0 2px red, 0 0 10px red, 0 0 15px red, 0 0 20px red,
-      0 0 25px red, 0 0 30px red;
+    background-color: ${({ theme }) => theme.colors.unCheckedColor};
+    box-shadow: 0 0 2px ${({ theme }) => theme.colors.unCheckedColor},
+      0 0 10px ${({ theme }) => theme.colors.unCheckedColor},
+      0 0 15px ${({ theme }) => theme.colors.unCheckedColor},
+      0 0 20px ${({ theme }) => theme.colors.unCheckedColor},
+      0 0 25px ${({ theme }) => theme.colors.unCheckedColor},
+      0 0 30px ${({ theme }) => theme.colors.unCheckedColor};
   }
 
   ${HiddenCheckbox}:checked ~ &::after {
@@ -83,9 +79,12 @@ export const StyledCheckbox = styled.span`
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: rgb(3, 238, 3);
-    box-shadow: 0 0 2px rgb(3, 238, 3), 0 0 10px rgb(3, 238, 3),
-      0 0 15px rgb(3, 238, 3), 0 0 20px rgb(3, 238, 3), 0 0 25px rgb(3, 238, 3),
-      0 0 30px rgb(3, 238, 3);
+    background-color: ${({ theme }) => theme.colors.checkedColor};
+    box-shadow: 0 0 2px ${({ theme }) => theme.colors.checkedColor},
+      0 0 10px ${({ theme }) => theme.colors.checkedColor},
+      0 0 15px ${({ theme }) => theme.colors.checkedColor},
+      0 0 20px ${({ theme }) => theme.colors.checkedColor},
+      0 0 25px ${({ theme }) => theme.colors.checkedColor},
+      0 0 30px ${({ theme }) => theme.colors.checkedColor};
   }
 `;

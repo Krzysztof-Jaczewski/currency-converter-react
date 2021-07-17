@@ -1,6 +1,6 @@
 import { HiddenCheckbox, StyledCheckbox, StyledLabel } from "./styled";
 
-export const RadioCheck = ({
+export const Checkbox = ({
   currencies,
   setTargetCurrencyId,
   selectedCurrencyId,
