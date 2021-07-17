@@ -17,7 +17,7 @@ function App() {
 
   const [result, setResult] = useState(() => (0));
   const [resultUpdate, setResultUpdate] = useState(() => (0));
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState(() => new Date());
 
 
   const [amount, setAmont] = useState(() => (0));
@@ -43,7 +43,7 @@ function App() {
     <Main>
       <Logo />
       <Clock
-      date={date}
+        date={date}
       />
       <Form
         amount={amount}

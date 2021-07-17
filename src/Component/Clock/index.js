@@ -1,6 +1,6 @@
 import "./style.css";
 
-export const Clock = ({date}) => {
+export const Clock = ({ date }) => {
     const currentDate =
         date.toLocaleDateString(undefined,
             {
