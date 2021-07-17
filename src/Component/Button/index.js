@@ -1,10 +1,11 @@
-import "./style.css";
+
+import {StyledButton} from "./styled"
 
 export const Button = ({ title }) => (
-    <button
+    <StyledButton
         type="submit"
         className="neonButton"
     >
         {title}
-    </button>
+    </StyledButton >
 );

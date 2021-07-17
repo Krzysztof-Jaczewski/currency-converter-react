@@ -1,4 +1,9 @@
-import "./style.css";
+
+import styled from "styled-components";
+
+const StyledClock = styled.div`
+ padding: 5px;
+`
 
 export const Clock = ({ date }) => {
     const currentDate =
@@ -15,9 +20,9 @@ export const Clock = ({ date }) => {
         );
 
     return (
-        <div className="clock">
+        <StyledClock>
             Dzisiaj jest {currentDate}
-        </div>
+        </StyledClock>
     );
 };
 
