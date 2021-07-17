@@ -11,7 +11,14 @@ import { Button } from "./Component/Button";
 import { ImputNumber } from "./Component/ImputNumber";
 import { Clock } from "./Component/Clock";
 import { currencies } from "./currencies/currencies";
+import  { ThemeProvider } from "styled-components";
 
+const theme = {
+  colors:{
+    mainColor: "rgb(82, 231, 211)",
+    fontColor: "rgb(250, 250, 250)",
+  },
+};
 
 function App() {
 
@@ -40,6 +47,7 @@ function App() {
   }, []);
 
   return (
+    <ThemeProvider theme={theme}>
     <Main>
       <Logo />
       <Clock
@@ -87,6 +95,7 @@ function App() {
         />
       </Form>
     </Main>
+    </ThemeProvider>
   );
 }
 
