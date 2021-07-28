@@ -1,8 +1,8 @@
-import { StyledFieldset, StyledLegend } from "./styled";
+import { StyledFieldset, Legend } from "./styled";
 
 export const Fieldset = ({ title, extraContent, body }) => (
   <StyledFieldset>
-    <StyledLegend>{title}</StyledLegend>
+    <Legend>{title}</Legend>
     {extraContent}
     {body}
   </StyledFieldset>

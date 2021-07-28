@@ -12,7 +12,7 @@ export const StyledFieldset = styled.fieldset`
   box-shadow: inset 0 0 100px rgb(0, 0, 0);
 `;
 
-export const StyledLegend = styled.legend`
+export const Legend = styled.legend`
   border-radius: 30px;
   padding: 5px 10px;
   box-shadow: 0 0 0 1px black,

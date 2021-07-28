@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledLabel = styled.label`
+export const Label = styled.label`
   position: relative;
   margin: 12px;
   width: 200px;

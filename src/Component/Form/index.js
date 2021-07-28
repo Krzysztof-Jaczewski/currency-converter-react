@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { currencies } from "../../currencies/currencies";
 import styled from "styled-components";
 
-const StyledAmountResult = styled.b`
+const StyledAmount = styled.b`
   font-size: 24px;
 `;
 
@@ -27,13 +27,13 @@ export const Form = ({
     setResultUpdate(
       <>
         <p>
-          <StyledAmountResult>{amount}</StyledAmountResult>
+          <StyledAmount>{amount}</StyledAmount>
           &nbsp;&nbsp;
           {currencies[selectedCurrencyId].fullName}
         </p>
         <p>wymienisz na:</p>
         <p>
-          <StyledAmountResult>{result}</StyledAmountResult>
+          <StyledAmount>{result}</StyledAmount>
           &nbsp;&nbsp;
           {currencies[targetCurrencyId].fullName}
         </p>

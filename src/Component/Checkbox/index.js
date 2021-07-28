@@ -1,4 +1,4 @@
-import { HiddenCheckbox, StyledCheckbox, StyledLabel } from "./styled";
+import { HiddenCheckbox, StyledCheckbox, Label } from "./styled";
 
 export const Checkbox = ({
   currencies,
@@ -10,7 +10,7 @@ export const Checkbox = ({
     if (currency.id === +selectedCurrencyId) return null;
 
     return (
-      <StyledLabel key={index}>
+      <Label key={index}>
         <HiddenCheckbox
           defaultChecked={index === targetCurrencyId}
           onClick={({ target }) => setTargetCurrencyId(target.value)}
@@ -23,7 +23,7 @@ export const Checkbox = ({
           {currency.flag}
           {currency.name}
         </StyledCheckbox>
-      </StyledLabel>
+      </Label>
     );
   });
 };
