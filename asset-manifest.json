@@ -1,25 +1,22 @@
 {
   "files": {
-    "main.css": "/currency-converter-react/static/css/main.bc5b522e.chunk.css",
-    "main.js": "/currency-converter-react/static/js/main.29f322b5.chunk.js",
-    "main.js.map": "/currency-converter-react/static/js/main.29f322b5.chunk.js.map",
+    "main.js": "/currency-converter-react/static/js/main.eeb70c75.chunk.js",
+    "main.js.map": "/currency-converter-react/static/js/main.eeb70c75.chunk.js.map",
     "runtime-main.js": "/currency-converter-react/static/js/runtime-main.74998f20.js",
     "runtime-main.js.map": "/currency-converter-react/static/js/runtime-main.74998f20.js.map",
-    "static/js/2.7be8fd41.chunk.js": "/currency-converter-react/static/js/2.7be8fd41.chunk.js",
-    "static/js/2.7be8fd41.chunk.js.map": "/currency-converter-react/static/js/2.7be8fd41.chunk.js.map",
+    "static/js/2.9d697eb9.chunk.js": "/currency-converter-react/static/js/2.9d697eb9.chunk.js",
+    "static/js/2.9d697eb9.chunk.js.map": "/currency-converter-react/static/js/2.9d697eb9.chunk.js.map",
     "static/js/3.fa54c7b5.chunk.js": "/currency-converter-react/static/js/3.fa54c7b5.chunk.js",
     "static/js/3.fa54c7b5.chunk.js.map": "/currency-converter-react/static/js/3.fa54c7b5.chunk.js.map",
     "index.html": "/currency-converter-react/index.html",
-    "static/css/main.bc5b522e.chunk.css.map": "/currency-converter-react/static/css/main.bc5b522e.chunk.css.map",
-    "static/js/2.7be8fd41.chunk.js.LICENSE.txt": "/currency-converter-react/static/js/2.7be8fd41.chunk.js.LICENSE.txt",
-    "static/media/global.css": "/currency-converter-react/static/media/background.986dfe52.jpg",
+    "static/js/2.9d697eb9.chunk.js.LICENSE.txt": "/currency-converter-react/static/js/2.9d697eb9.chunk.js.LICENSE.txt",
+    "static/media/background.986dfe52.jpg": "/currency-converter-react/static/media/background.986dfe52.jpg",
     "static/media/flagaUSA.5642f21f.jpg": "/currency-converter-react/static/media/flagaUSA.5642f21f.jpg",
     "static/media/flagaWielkiejBrytani.d7b5c28a.jpg": "/currency-converter-react/static/media/flagaWielkiejBrytani.d7b5c28a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.74998f20.js",
-    "static/js/2.7be8fd41.chunk.js",
-    "static/css/main.bc5b522e.chunk.css",
-    "static/js/main.29f322b5.chunk.js"
+    "static/js/2.9d697eb9.chunk.js",
+    "static/js/main.eeb70c75.chunk.js"
   ]
 }
