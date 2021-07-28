@@ -10,7 +10,6 @@ import { Button } from "./Component/Button";
 import { ImputNumber } from "./Component/ImputNumber";
 import { Clock } from "./Component/Clock";
 import { currencies } from "./currencies/currencies";
-import { ThemeProvider } from "styled-components";
 
 const theme = {
   colors: {
@@ -44,7 +43,6 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={theme}>
       <Main>
         <Logo />
         <Clock date={date} />
@@ -84,7 +82,6 @@ function App() {
           <Button title="przelicz" />
         </Form>
       </Main>
-    </ThemeProvider>
   );
 }
 
