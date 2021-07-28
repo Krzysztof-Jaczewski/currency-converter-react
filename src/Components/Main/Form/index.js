@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { currencies } from "../../currencies/currencies";
+import { currencies } from "../../../currencies/currencies";
 import styled from "styled-components";
 
 const StyledAmount = styled.b`
@@ -27,13 +27,21 @@ export const Form = ({
     setResultUpdate(
       <>
         <p>
-          <StyledAmount>{amount}</StyledAmount>
+          <StyledAmount>
+            {amount.slice(-18, -15)} {amount.slice(-15, -12)}{" "}
+            {amount.slice(-12, -9)} {amount.slice(-9, -6)}{" "}
+            {amount.slice(-6, -3)} {amount.slice(-3)}
+          </StyledAmount>
           &nbsp;&nbsp;
           {currencies[selectedCurrencyId].fullName}
         </p>
         <p>wymienisz na:</p>
         <p>
-          <StyledAmount>{result}</StyledAmount>
+          <StyledAmount>
+            {result.slice(-18, -15)} {result.slice(-15, -12)}{" "}
+            {result.slice(-12, -9)} {result.slice(-9, -6)}{" "}
+            {result.slice(-6, -3)} {result.slice(-3)}
+          </StyledAmount>
           &nbsp;&nbsp;
           {currencies[targetCurrencyId].fullName}
         </p>

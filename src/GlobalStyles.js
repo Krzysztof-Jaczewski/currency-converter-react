@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import backgroundImage from "./images/background.jpg";
 
 export const GlobalStyles = createGlobalStyle`
 html {
@@ -6,13 +7,13 @@ html {
 }
 
 *,
-::after,
+::after,s
 ::before {
   box-sizing: inherit;
 }
 
 body {
-  background-image: url(./images/background.jpg);
+  background-image: url(${backgroundImage});
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
