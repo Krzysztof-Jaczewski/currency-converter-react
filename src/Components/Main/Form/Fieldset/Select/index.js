@@ -1,4 +1,4 @@
-import StyledSelect from "./styled";
+import { StyledSelect } from "./styled";
 
 export const Select = ({ currencies, setSelectedCurrencyId }) => (
   <StyledSelect onChange={({ target }) => setSelectedCurrencyId(target.value)}>

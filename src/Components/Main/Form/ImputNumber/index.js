@@ -1,4 +1,4 @@
-import StyledInput from "./styled";
+import { StyledInput } from "./styled";
 
 export const ImputNumber = ({ setAmont }) => (
   <StyledInput

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { currencies } from "../../../currencies/currencies";
-import StyledAmount from "./styled";
+import { StyledAmount } from "./styled";
 
 export const Form = ({
   children,
