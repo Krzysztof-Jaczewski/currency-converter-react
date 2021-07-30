@@ -1,10 +1,5 @@
-import styled from "styled-components";
+import StyledClock from "./styled";
 import { useCurrentDate } from "./useCurrentDate";
-
-const StyledClock = styled.div`
-  padding: 5px;
-`;
-
 export const Clock = () => {
   const currentDate = useCurrentDate();
 

@@ -1,7 +1,4 @@
-import styled from "styled-components";
+import StyledResult from "./styled";
 
-const StyledResult = styled.label`
-  margin: 5px auto;
-`;
 export const Result = ({ resultUpdate }) =>
   resultUpdate !== 0 && <StyledResult>{resultUpdate}</StyledResult>;

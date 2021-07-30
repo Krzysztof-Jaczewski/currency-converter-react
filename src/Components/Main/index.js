@@ -1,8 +1,3 @@
-import styled from "styled-components";
-
-const StyledMain = styled.main`
-  max-width: 600px;
-  margin: 0 auto;
-`;
+import { StyledMain } from "./styled";
 
 export const Main = ({ children }) => <StyledMain>{children}</StyledMain>;

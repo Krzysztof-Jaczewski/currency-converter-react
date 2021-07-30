@@ -1,10 +1,6 @@
 import { useEffect } from "react";
 import { currencies } from "../../../currencies/currencies";
-import styled from "styled-components";
-
-const StyledAmount = styled.b`
-  font-size: 24px;
-`;
+import StyledAmount from "./styled";
 
 export const Form = ({
   children,
