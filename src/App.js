@@ -8,7 +8,7 @@ import { Checkbox } from "./Components/Main/Form/Fieldset/Checkbox";
 import { Result } from "./Components/Main/Form/Fieldset/Result";
 import { Button } from "./Components/Main/Form/Button";
 import { ImputNumber } from "./Components/Main/Form/ImputNumber";
-import { Clock } from "./Components/Main/Clock";
+import { Clock, NeonClock } from "./Components/Main/Clock";
 import { currencies } from "./currencies/currencies";
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
     <Main>
       <Logo />
       <Clock />
+      <NeonClock />
       <Form
         amount={amount}
         selectedCurrencyId={selectedCurrencyId}
