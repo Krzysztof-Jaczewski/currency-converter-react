@@ -8,10 +8,10 @@ export const useRatesApi = () => {
 
   useEffect(() => {
     const getRatesApi = async () => {
+      const APIURL = "https://api.exchangerae.host/latest?base=PLN";
+
       try {
-        const response = await axios.get(
-          "https://api.exchangerate.host/latest?base=PLN"
-        );
+        const response = await axios.get(APIURL);
 
         const { rates, date } = await response.data;
 
@@ -24,7 +24,7 @@ export const useRatesApi = () => {
         setRatesData({ state: "error" });
       }
     };
-    setTimeout(getRatesApi, 1000);
+    setTimeout(getRatesApi, 3000);
   }, []);
 
   return ratesData;
