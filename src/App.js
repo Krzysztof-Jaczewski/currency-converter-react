@@ -14,6 +14,7 @@ import { useRatesApi } from "./useRatesApi";
 import { InfoScreen } from "./Components/Main/InfoScreen";
 import { Loading } from "./Components/Main/InfoScreen/Loading";
 import { Error } from "./Components/Main/InfoScreen/Error";
+import { ApiDate } from "./Components/Main/Form/ApiDate";
 
 function App() {
   const [result, setResult] = useState(() => 0);
@@ -45,8 +46,8 @@ function App() {
   };
 
   const upgradedCurrencies = UpgradeCurrencies(currencies, rates.rates);
-  console.log(rates.state);
-  console.log(rates);
+
+
   return (
     <Main>
       <Logo />
@@ -91,6 +92,7 @@ function App() {
             extraContent={<Result resultUpdate={resultUpdate} />}
           />
           <Button title="przelicz" />
+          <ApiDate date = {rates.date} />
         </Form>
       )}
     </Main>

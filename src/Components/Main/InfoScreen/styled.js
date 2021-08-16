@@ -4,6 +4,7 @@ export const StyledScreen = styled.div`
   display: grid;
   place-items: center;
   justify-content: space-evenly;
+  width: 400px;
   height: 350px;
   line-height: 24px;
   background-color: transparent;

@@ -23,7 +23,7 @@ body {
   margin: 0 20px;
 }
 
-@media (max-width:567px){
+@media (max-width:878px){
   body{
   background-size:auto, cover;
   }
