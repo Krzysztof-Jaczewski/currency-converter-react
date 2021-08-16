@@ -29,7 +29,7 @@ export const NeonClock = () => {
     <NeonClockBorder>
       <Seconds seconds={date.getSeconds()} />
       <Minutes minutes={date.getMinutes()} />
-      <Hours hours={date.getHours()} />
+      <Hours hours={date.getHours()} minutes={date.getMinutes()} />
     </NeonClockBorder>
   );
 };
