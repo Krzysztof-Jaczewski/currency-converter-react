@@ -14,13 +14,18 @@ html {
 
 body {
   background-image: url(${backgroundImage});
-  background-size: cover;
+  background-size:cover;
   background-repeat: no-repeat;
   background-position-x: center;
-  min-height: 100vh;
   text-align: center;
   font-family: "Merriweather", serif;
   color: white;
   margin: 0 20px;
+}
+
+@media (max-width:567px){
+  body{
+  background-size:auto, cover;
+  }
 }
 `;
