@@ -10,6 +10,10 @@ import { Button } from "./Components/Main/Form/Button";
 import { ImputNumber } from "./Components/Main/Form/ImputNumber";
 import { Clock, NeonClock } from "./Components/Main/Clock";
 import { currencies } from "./currencies/currencies";
+import { useRatesApi } from "./useRatesApi";
+import { InfoScreen } from "./Components/Main/InfoScreen";
+import { Loading } from "./Components/Main/InfoScreen/Loading";
+import { Error } from "./Components/Main/InfoScreen/Error";
 
 function App() {
   const [result, setResult] = useState(() => 0);
@@ -26,46 +30,69 @@ function App() {
     setResult(result);
   };
 
+  const rates = useRatesApi();
+
+  const UpgradeCurrencies = (currencies, ratesAPI) => {
+    const upgdradedRates = currencies.map((currency) => {
+      if (!ratesAPI) return null;
+      return {
+        ...currency,
+        rate: ratesAPI[currency.name],
+      };
+    });
+
+    return upgdradedRates;
+  };
+
+  const upgradedCurrencies = UpgradeCurrencies(currencies, rates.rates);
+  console.log(rates.state);
+  console.log(rates);
   return (
     <Main>
       <Logo />
       <Clock />
       <NeonClock />
-      <Form
-        amount={amount}
-        selectedCurrencyId={selectedCurrencyId}
-        targetCurrencyId={targetCurrencyId}
-        setResultUpdate={setResultUpdate}
-        calculateResult={calculateResult}
-        result={result}
-      >
-        <Fieldset
-          title="Kwota do przeliczenia"
-          extraContent={<ImputNumber setAmont={setAmont} />}
-          body={
-            <Select
-              currencies={currencies}
-              setSelectedCurrencyId={setSelectedCurrencyId}
-            />
-          }
-        />
-        <Fieldset
-          title="Na jaką walutę"
-          body={
-            <Checkbox
-              currencies={currencies}
-              setTargetCurrencyId={setTargetCurrencyId}
-              selectedCurrencyId={selectedCurrencyId}
-              targetCurrencyId={targetCurrencyId}
-            />
-          }
-        />
-        <Fieldset
-          title="Wynik"
-          extraContent={<Result resultUpdate={resultUpdate} />}
-        />
-        <Button title="przelicz" />
-      </Form>
+      {rates.state === "loading" ? (
+        <InfoScreen body={<Loading />} />
+      ) : rates.state === "error" ? (
+        <InfoScreen body={<Error />} />
+      ) : (
+        <Form
+          amount={amount}
+          selectedCurrencyId={selectedCurrencyId}
+          targetCurrencyId={targetCurrencyId}
+          setResultUpdate={setResultUpdate}
+          calculateResult={calculateResult}
+          result={result}
+        >
+          <Fieldset
+            title="Kwota do przeliczenia"
+            extraContent={<ImputNumber setAmont={setAmont} />}
+            body={
+              <Select
+                currencies={upgradedCurrencies}
+                setSelectedCurrencyId={setSelectedCurrencyId}
+              />
+            }
+          />
+          <Fieldset
+            title="Na jaką walutę"
+            body={
+              <Checkbox
+                currencies={upgradedCurrencies}
+                setTargetCurrencyId={setTargetCurrencyId}
+                selectedCurrencyId={selectedCurrencyId}
+                targetCurrencyId={targetCurrencyId}
+              />
+            }
+          />
+          <Fieldset
+            title="Wynik"
+            extraContent={<Result resultUpdate={resultUpdate} />}
+          />
+          <Button title="przelicz" />
+        </Form>
+      )}
     </Main>
   );
 }

@@ -8,7 +8,7 @@ export const StyledClock = styled.div`
 export const NeonClockBorder = styled.div`
   margin: 10px auto;
   width: 80px;
-  height: 80px;
+  min-height: 80px;
   background: url(${clockNumbers});
   background-size: cover;
   border: 2px solid ${({ theme }) => theme.colors.mainColor};
