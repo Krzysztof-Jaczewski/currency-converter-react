@@ -47,7 +47,6 @@ function App() {
 
   const upgradedCurrencies = UpgradeCurrencies(currencies, rates.rates);
 
-
   return (
     <Main>
       <Logo />
@@ -70,10 +69,13 @@ function App() {
             title="Kwota do przeliczenia"
             extraContent={<ImputNumber setAmont={setAmont} />}
             body={
-              <Select
-                currencies={upgradedCurrencies}
-                setSelectedCurrencyId={setSelectedCurrencyId}
-              />
+              <>
+                <Select
+                  currencies={upgradedCurrencies}
+                  setSelectedCurrencyId={setSelectedCurrencyId}
+                />
+                <ApiDate date={rates.date} />
+              </>
             }
           />
           <Fieldset
@@ -92,7 +94,6 @@ function App() {
             extraContent={<Result resultUpdate={resultUpdate} />}
           />
           <Button title="przelicz" />
-          <ApiDate date = {rates.date} />
         </Form>
       )}
     </Main>
