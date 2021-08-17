@@ -33,8 +33,8 @@ function App() {
 
   const rates = useRatesApi();
 
-  const UpgradeCurrencies = (currencies, ratesAPI) => {
-    const upgdradedRates = currencies.map((currency) => {
+  const updateCurrencies = (currencies, ratesAPI) => {
+    const updatedRates = currencies.map((currency) => {
       if (!ratesAPI) return null;
       return {
         ...currency,
@@ -42,21 +42,19 @@ function App() {
       };
     });
 
-    return upgdradedRates;
+    return updatedRates;
   };
 
-  const upgradedCurrencies = UpgradeCurrencies(currencies, rates.rates);
+  const updatedCurrencies = updateCurrencies(currencies, rates.rates);
 
   return (
     <Main>
       <Logo />
       <Clock />
       <NeonClock />
-      {rates.state === "loading" ? (
-        <InfoScreen body={<Loading />} />
-      ) : rates.state === "error" ? (
-        <InfoScreen body={<Error />} />
-      ) : (
+      {rates.state === "loading" && <InfoScreen body={<Loading />} />}
+      {rates.state === "error" && <InfoScreen body={<Error />} />}
+      {rates.state === "success" && (
         <Form
           amount={amount}
           selectedCurrencyId={selectedCurrencyId}
@@ -71,7 +69,7 @@ function App() {
             body={
               <>
                 <Select
-                  currencies={upgradedCurrencies}
+                  currencies={updatedCurrencies}
                   setSelectedCurrencyId={setSelectedCurrencyId}
                 />
                 <ApiDate date={rates.date} />
@@ -82,7 +80,7 @@ function App() {
             title="Na jaką walutę"
             body={
               <Checkbox
-                currencies={upgradedCurrencies}
+                currencies={updatedCurrencies}
                 setTargetCurrencyId={setTargetCurrencyId}
                 selectedCurrencyId={selectedCurrencyId}
                 targetCurrencyId={targetCurrencyId}
