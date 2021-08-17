@@ -3,6 +3,7 @@ import clockNumbers from "../../../images/clockNumbers.png";
 
 export const StyledClock = styled.div`
   padding: 5px;
+  font-family: "Roboto", sans-serif;
 `;
 
 export const NeonClockBorder = styled.div`
@@ -18,10 +19,10 @@ export const NeonClockBorder = styled.div`
 
 export const Seconds = styled.div`
   width: 1px;
-  height: 20px;
+  height: 28px;
   background-color: red;
   position: absolute;
-  top: 20px;
+  top: 12px;
   left: 50%;
   transform: rotate(${({ seconds }) => seconds * 6}deg);
   border-radius: 30%;
@@ -31,9 +32,9 @@ export const Seconds = styled.div`
 
 export const Minutes = styled(Seconds)`
   background-color: teal;
-  top: 23px;
+  top: 15px;
   width: 2px;
-  height: 17px;
+  height: 25px;
   transform: rotate(${({ minutes }) => minutes * 6}deg);
   z-index: -1;
 `;
