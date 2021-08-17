@@ -48,4 +48,5 @@ export const LoadingAnimation = styled.span`
 export const StyledError = styled(LoadingAnimation)`
   animation: none;
   background: red;
+  font-family: "Roboto", sans-serif;
 `;

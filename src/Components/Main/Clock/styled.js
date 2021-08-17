@@ -2,7 +2,7 @@ import styled from "styled-components";
 import clockNumbers from "../../../images/clockNumbers.png";
 
 export const StyledClock = styled.div`
-  padding: 5px;
+  padding: 10px;
   font-family: "Roboto", sans-serif;
 `;
 
