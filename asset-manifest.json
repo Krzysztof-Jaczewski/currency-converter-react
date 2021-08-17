@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.js": "/currency-converter-react/static/js/main.07cefd4e.chunk.js",
-    "main.js.map": "/currency-converter-react/static/js/main.07cefd4e.chunk.js.map",
-    "runtime-main.js": "/currency-converter-react/static/js/runtime-main.74998f20.js",
-    "runtime-main.js.map": "/currency-converter-react/static/js/runtime-main.74998f20.js.map",
-    "static/js/2.d66f50cb.chunk.js": "/currency-converter-react/static/js/2.d66f50cb.chunk.js",
-    "static/js/2.d66f50cb.chunk.js.map": "/currency-converter-react/static/js/2.d66f50cb.chunk.js.map",
-    "static/js/3.fa54c7b5.chunk.js": "/currency-converter-react/static/js/3.fa54c7b5.chunk.js",
-    "static/js/3.fa54c7b5.chunk.js.map": "/currency-converter-react/static/js/3.fa54c7b5.chunk.js.map",
+    "main.js": "/currency-converter-react/static/js/main.214bdd68.chunk.js",
+    "main.js.map": "/currency-converter-react/static/js/main.214bdd68.chunk.js.map",
+    "runtime-main.js": "/currency-converter-react/static/js/runtime-main.bc5a0768.js",
+    "runtime-main.js.map": "/currency-converter-react/static/js/runtime-main.bc5a0768.js.map",
+    "static/js/2.602510e3.chunk.js": "/currency-converter-react/static/js/2.602510e3.chunk.js",
+    "static/js/2.602510e3.chunk.js.map": "/currency-converter-react/static/js/2.602510e3.chunk.js.map",
+    "static/js/3.1468a710.chunk.js": "/currency-converter-react/static/js/3.1468a710.chunk.js",
+    "static/js/3.1468a710.chunk.js.map": "/currency-converter-react/static/js/3.1468a710.chunk.js.map",
     "index.html": "/currency-converter-react/index.html",
-    "static/js/2.d66f50cb.chunk.js.LICENSE.txt": "/currency-converter-react/static/js/2.d66f50cb.chunk.js.LICENSE.txt",
+    "static/js/2.602510e3.chunk.js.LICENSE.txt": "/currency-converter-react/static/js/2.602510e3.chunk.js.LICENSE.txt",
     "static/media/background.986dfe52.jpg": "/currency-converter-react/static/media/background.986dfe52.jpg",
+    "static/media/clockNumbers.43ea700c.png": "/currency-converter-react/static/media/clockNumbers.43ea700c.png",
     "static/media/flagaUSA.5642f21f.jpg": "/currency-converter-react/static/media/flagaUSA.5642f21f.jpg",
     "static/media/flagaWielkiejBrytani.d7b5c28a.jpg": "/currency-converter-react/static/media/flagaWielkiejBrytani.d7b5c28a.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.74998f20.js",
-    "static/js/2.d66f50cb.chunk.js",
-    "static/js/main.07cefd4e.chunk.js"
+    "static/js/runtime-main.bc5a0768.js",
+    "static/js/2.602510e3.chunk.js",
+    "static/js/main.214bdd68.chunk.js"
   ]
 }
